@@ -11,6 +11,9 @@ public class Inventory {
     public void remove(Item item) {
         items.remove(item);
     }
+    public List<Item> listItems() {
+       return items;
+    }
 
     public Item search(Item item) throws ItemNotFoundException {
         int index = items.indexOf(item);
