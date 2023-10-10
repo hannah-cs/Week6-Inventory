@@ -3,22 +3,22 @@ package InventoryProject;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Inventory {
-    List<Item> items = new ArrayList<>();
+public class Inventory<T extends Item> {
+    List<T> items = new ArrayList<>();
 
-    public void add(Item item) {
+    public void add(T item) {
         items.add(item);
     }
 
-    public void remove(Item item) throws InsufficientStockException {
+    public void remove(T item) throws InsufficientStockException {
         hasEnoughItems();
         items.remove(item);
     }
-    public List<Item> listItems() {
+    public List<T> listItems() {
        return items;
     }
 
-    public Item search(Item item) throws ItemNotFoundException {
+    public T search(T item) throws ItemNotFoundException {
         int index = items.indexOf(item);
         if (index < 0) {
             throw new ItemNotFoundException("Item not found");
