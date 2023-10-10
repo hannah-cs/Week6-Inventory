@@ -8,7 +8,8 @@ public class Inventory {
         items.add(item);
     }
 
-    public void remove(Item item) {
+    public void remove(Item item) throws InsufficientStockException {
+        hasEnoughItems();
         items.remove(item);
     }
     public List<Item> listItems() {
@@ -23,11 +24,11 @@ public class Inventory {
         return items.get(index);
     }
 
-    public int enougthItems(Item item) throws InsufficientStockException {
-        int itemNumber = items.size();
-        if (itemNumber < 1) {
+    private boolean hasEnoughItems( ) throws InsufficientStockException {
+        int quantity = items.size();
+        if (quantity < 1) {
             throw new InsufficientStockException("Not enough items in stock.");
         }
-        return itemNumber;
+        return true;
     }
 }
