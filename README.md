@@ -6,6 +6,7 @@ Inventory Management System
 Overview:
 Create a simple Inventory Management System that allows users to add, delete, and manage items. The project will involve writing Java code that covers Exceptions, Generics, Maven for project management, and Unit Testing with JUnit.
 
+___
 
 Day 1: Exceptions
 Objective: Implement basic functionality with a focus on exception handling.
