@@ -3,7 +3,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InsufficientStockException {
         Inventory items = new Inventory();
 
         Item item = new Item (001,"Example", 4);
@@ -11,6 +11,10 @@ public class Main {
 
         items.add(item);
         items.add(item2);
+        items.remove(item2);
+        items.remove(item);
+        items.remove(item);
+
 
         System.out.println(items.listItems());
     }
