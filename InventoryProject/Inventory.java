@@ -1,3 +1,5 @@
+package InventoryProject;
+
 import java.util.ArrayList;
 import java.util.List;
 

@@ -1,3 +1,5 @@
+package InventoryProject;
+
 import java.util.Objects;
 
 public class Item {
