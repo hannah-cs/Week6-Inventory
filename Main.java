@@ -9,13 +9,15 @@ public class Main {
         Item item = new Item (001,"Example", 4);
         Item item2 = new Item (002,"Example Two", 0);
 
-        items.add(item);
-        items.add(item2);
-        items.remove(item2);
-        items.remove(item);
-        items.remove(item);
+
+
 
 
         System.out.println(items.listItems());
+        Inventory<CosmeticItem>  cosmeticItemInventory = new Inventory<>();
+        Inventory<FoodItem>  foodItemInventory = new Inventory<>();
+        cosmeticItemInventory.add(new CosmeticItem(1, "cream", 3, "skincare"));
+        foodItemInventory.add(new FoodItem(1, "apple", 1, 10));
+        System.out.println(cosmeticItemInventory.listItems().get(0).getType());
     }
 }
