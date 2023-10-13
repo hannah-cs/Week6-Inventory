@@ -1,3 +1,5 @@
+package InventoryProject;
+
 import java.util.Objects;
 
 public class Item {
@@ -57,4 +59,5 @@ public class Item {
                 ", quantity=" + quantity +
                 '}';
     }
+
 }
