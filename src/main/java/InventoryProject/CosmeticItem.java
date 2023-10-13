@@ -1,3 +1,5 @@
+package InventoryProject;
+
 public class CosmeticItem extends Item {
     private String type;
 
