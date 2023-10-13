@@ -15,6 +15,7 @@ class InventoryTest {
 
     @AfterEach
     void tearDown() {
+        inventory = null;
     }
 
     @Test
